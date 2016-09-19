@@ -1,0 +1,2048 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><title>Nessus Scan Report</title><style type="text/css" media="all">
+	UL.ulist {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px;};
+	LI.list  {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px; list-style: disc;}
+	LI.list0 {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px; list-style: disc; color:#357abd;}
+	LI.list1 {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px; list-style: disc; color:#4cae4c;}
+	LI.list2 {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px; list-style: disc; color:#fdc431;}
+	LI.list3 {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px; list-style: disc; color:#ee9336;}
+	LI.list4 {padding: 0 10px; line-height:25px; margin-bottom:0px; margin-top:0px; list-style: disc; color:#d43f3a;}
+
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		-webkit-text-size-adjust: none;
+	}
+    
+	html, body {
+		font-family: helvetica, arial, sans-serif;
+		width: 100%;
+		color: #263645;
+		font-size: 12px;
+		background: #efefef;
+	}
+
+	a, a:visited, a:active {
+		color: #004a97;
+	}
+
+	a:hover {
+		color: #00253d;
+	}
+
+	.container_16 {
+		margin: 0 auto;
+		padding: 0 14px 14px 14px;
+		background: #fff;
+		border-top: #425363 solid 7px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+		margin-bottom: 20px;
+		border-radius: 0 0 5px 5px;
+	}
+
+	#reportContent {
+		width: 100%;
+	}
+
+	h1.classtitle {
+		padding: 15px 0 10px 0;
+		border-bottom: 1px dotted #ccc;
+		margin: 0 0 15px 0;
+	}
+
+	h2.classtitle {
+		color: #00a5b5;
+		font-weight: normal;
+		font-size: 22px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	h2.date {
+		font-size: 14px;
+		color: #768591;
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+	
+	.reportinfo {
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		padding: 0 0 15px 0;
+		margin: 0 0 5px 0;
+		font-weight: normal;
+		border-bottom: 1px dotted #ccc;
+	}
+	
+	.reportpadding {
+		padding: 15px 0 0 0 !important;
+	}
+	
+	.classtoc {
+		display: block;
+		font-size: 18px;
+		color: #777779;
+		padding: 15px 0;
+		margin: 15px 0 0 0;
+	}
+
+	h1.classchapter {
+		background: #425363;
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 6px 10px;
+		margin: 10px 0 0 0;
+		border-radius: 4px 4px 0 0;
+	}
+
+	h2.classsection {
+		display: block;
+		background: #425363;
+		color: #fff;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 6px 10px;
+		margin: 30px 0 0 0;
+		border-radius: 4px 4px 0 0;
+	}
+
+	h2.classh1  {
+		display: block;
+		background: #efefef;
+		font-weight: bold;
+		font-size: 13px;
+		padding: 6px 10px;
+	}
+
+	.classtext {
+		font-size: 13px;
+		line-height: 18px;
+	}
+	
+	div#reportContent div span.classtext {
+		padding: 6px 10px;
+		display: inline-block;
+	}
+
+	h2.classsubsection {
+		background: #768591;
+		color: #fff;
+		font-weight: bold;
+		font-size: 13px;
+		padding: 6px 10px;
+	}
+	
+	.classheader h1 {
+		color: #fff;
+		font-weight: bold;
+		font-size: 15px;
+		padding: 0 10px;
+		text-align: center;
+	}
+	
+	.reportinfo b {
+		font-weight: bold;
+	}
+	
+	h3.classtitle  {
+		color: #69737b;
+		font-size: 16px;
+		padding: 0 10px;
+	}
+	
+	.classsection_sub tr, td {
+		color: #053958;
+		font-size: 13px;
+		padding: 0 10px;
+	}
+	
+	td {
+		padding: 6px 10px;
+	}
+	
+	h2.classsection, h2.classsection0, h2.classsection1, h2.classsection2, h2.classsection3, h2.classsection4 {
+		background: #053958;
+		color: #fff;
+		font-weight: bold;
+		font-size: 13px;
+		padding: 6px 10px;
+		margin-bottom: 0px;
+		margin-top: 10px;
+	}
+	
+	.classcell4, h2.classsection4 {
+		background-color: #d43f3a;
+	}
+
+	.classcell3, h2.classsection3 {
+		background-color: #ee9336;
+	}
+
+	.classcell2, h2.classsection2 {
+		background-color: #fdc431;
+	}
+
+	.classcell1, h2.classsection1 {
+		background-color: #4cae4c;
+	}
+
+	.classcell0, h2.classsection0 {
+		background-color: #357abd;
+	}
+
+	
+	#copyright {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 12px;
+		color: #A9A8A9;
+		padding: 6px 0 20px 0;
+	}
+	
+	#copyright a, #copyright a:visited, #copyright a:active {
+		color: #A9A8A9;
+	}
+	
+	div.icon {
+		display: none;
+	}
+	
+	.nopadding {
+		padding: 0 !important;
+	}
+	
+	body.email h2.classh1 {
+		display: block;
+		margin: 20px 0 0 0;
+		background: #425363;
+		color: #fff;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 6px 10px;
+		border-radius: 4px 4px 0 0;
+	}
+	
+	body.email div#reportContent div span.classtext {
+		padding: 0;
+		display: inline;
+	}
+	
+	body.email h2.tips {
+		background: #004a97 !important;
+	}
+	
+	body.email h2.errors {
+		background: #c00 !important;
+	}
+	
+	body.email h2.classsection {
+		display: none;
+	}
+	
+	.classtoc1 a {
+		font-size: 16px;
+	}
+				
+	.classtoc2 a {
+		font-size: 13px;
+		padding: 0 20px;
+	}
+	
+	h2.classh2  {
+		background: #f8f8f8;
+		font-weight: bold;
+		font-size: 13px;
+		padding: 6px 10px;
+	}
+	
+	.classpre {
+		display: block;
+		font-size: 13px;
+		font-family: Courier New, Courier, monospace;
+		padding: 10px;
+		color: #000;
+	}
+	
+	.classh1_grey h2 {
+		background: #eaeaea;
+		color:#053958;
+		font-size: 13px;
+		padding: 0 10px;
+		margin-top:0px;
+		margin-bottom:2px;
+	}
+ 	
+	@media only screen and (max-device-width: 480px) {
+		html, body {
+			display: block;
+			min-width: 480px;
+			background: #fff;
+		}
+		
+		table {
+			table-layout: auto !important;
+		}
+		
+		table td {
+			word-wrap: break-word;
+		}
+		
+		table.container_16 {
+			width: 100%;
+			padding: 0 4% 20px 4%;
+			background: #fff;
+			border-top: #425363 solid 7px;
+			box-shadow: none !important;
+			margin-bottom: 20px;
+			border-radius: 0;
+		}
+		
+		#copyright {
+			display: block;
+			width: 90%;
+			text-align: center;
+			font-size: 10px;
+			color: #A9A8A9;
+			padding: 5px 0 20px 0;
+			border-top: 1px dotted #ccc;
+			margin: 0 auto;
+			line-height: 16px;
+		}
+		
+		.classtitle img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+</style><script type="text/javascript">
+		function toggle(divId) {
+			var divObj = document.getElementById(divId);
+			if (divObj) {
+				var displayType = divObj.style.display;
+				if (displayType == "" || displayType == "block") {
+					divObj.style.display = "none";
+				} else {
+					divObj.style.display = "block";
+				}
+			}
+		}
+
+		function ceall(flag) {
+			var divs = document.getElementsByTagName("div");
+			var i = 0;
+			for (i = 0; i < divs.length; i++) {
+				if (divs[i].getAttribute("id") != null && divs[i].getAttribute("id").match('btag-')) {
+					if (flag == 0) {
+						divs[i].style.display = "none";
+					} else {
+						divs[i].style.display = "block";
+					}
+				}
+			}
+		}
+		</script></head><body class=""><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="center" valign="top" class="nopadding" style="vertical-align: top"><table cellpadding="0" cellspacing="0" border="0" width="80%" bgcolor="#FFFFFF" class="container_16"><tr><td><table xmlns="" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td class="nopadding"><h1 class="classtitle"><img src="data:image/gif;base64,R0lGODlh9wBEAPcAAAAAAP///z1QXwCktff3+O7v8cfM0d7h5N3g49zf4trd4Ors7ujq7Ofp6+Tm6Pf4+fX29/T19vP09fDx8pGbpJ2mrkFTYkNVZEtcak1ebE9gblJjcVVlclhodVpqd1lpdl5ue2h2gmt5hW17h3aDjnWCjXSBjHmGkXeEj4GNl4WRm4uWn4qVnoiTnJGcpY+ao46Zoo2YoaqyuamxuKiwt7a9w7S7wbO6wLi/xbe+xMTKz8LIzcHHzD5RYD9SYUJVY0VYZkVXZUdZZ0haaFFib1NkcVZndFtrd11teWJyfmJxfWFwfGRzf2d2gmZ1gWV0gGl4g299iG58h3KAi3F/inB+iXOBjHiFj3yJk3uIknqHkX+Mln6LlYSQmYmVnoiUnYeTnIaSm4uXoJiiqpagqJqkrKavtqWutaSttKOss621u7G5v6+3vc7T183S1szR1cvQ1MnO0tjc39fb3tba3dXZ3NTY29vf4tre4dnd4E5gbZSfp5OeppKdpZCbo6Grsp+psJ6or6u0ur7FyrzDyLvCx7rBxrnAxefq7OXo6uPm6OLl5+Hk5uDj5dLX2tHW2c/U1/Hz9O/x8uzu7/r9/vf8/fX7/Of2+On3+QGktQKltgSltgemtwmnuA+puRGquhSruxesvBqtvSCvviOwvy20wjC1wzK2xDW3xTq4xj26x0G7yE/AzFLBzVXCzljDz1rEz1/G0WDG0WvK1G3L1XTN13fO2HvQ2X/R2oXT3IfU3IrV3Y3W3pvb4qrg5q/i6LXl6sbr78vs8NPv8tXw89jx9Nvy9eL19/H6+/P7/AWmtgintwuouAyouBasuxmtvBuuvR2uvSSxvyaywCqzwTi4xUO8yEW9yUq+ymTI0mjJ02/M1XHN1njP2IHS2oTT25HY35ba4Z/d46Tf5afg5a7i57Hj6LPk6bnm6rvn67/o7MHp7cns783t8M/u8d3z9d/09uz4+e75+uX29+r4+fn9/fz+/v7///3+/vv8/Pr7+/n6+vj5+fb39/39/f///yH5BAEAAP8ALAAAAAD3AEQAAAj/AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMkSI6ZhwtS5K2YpJB4BOHM+yQdRQs6cO1oKHfpxnrhspjgNWMp0AChr3YDV43jzJ04yPa0KCEq0q1eE83TJsuXuoLxpTdOqZeYK3b2MVbXGeejTKteveL0CY9b020F6pNQKbkoqHKWLca1mKOCw7s+7eSOzvNRMLbqDxXadcwdP3rxi6nrNMpVJMClfFhNbpYKvoWOgkmOv3CWY1cRL4U7VvkRRtdU0rrVClk18ZDbBpSwKY6X202WJvn/6sMPwNc7hxbN7vCV4FcZguptq/+IFXatVDpEWWt+qvf1Hd6XThlN4DhcsVvhleTMXr6C9b8qktc1bD0VnFRbqCefeghXp0k5BuKSFjT0KHSdYJqmAgwxB64CSFjcQGWjVGgqth11BkeiQhgti8CFDG/s8FEEcZowhhguAFKJIQ/7csUYgL8BAhhqPxHiSP3isUUGQQxb50T3f0CIPQeZYMwoq4BwWQD24kPKMLJgM9Msp11iTCjRr1dKfQPAE1hQ4BWqVgVYXHJCQiQnFYUUP5gEBxiILxVEFn+ZxUMYCCC3QBwbmCXBBFnG0RtAYQ1RaKQILiWDpEBwYtIALjJr3KByScoTONOIQiFAsTVEz1UHInP8zi4dMfSLOQMe4uZQm6Tjk2yGh/oQEPwjhaZADUjQqHRn6HBTBCcr+ZAEf/RRkAxDR5uQEHQS5YBUeCy3x0xDWYputAE7M4RE8p6RCDELHqEXOQvWMgxZT2GwYgDGfNAUKPQ351gYP5rFQrIIFGSDEuTmJEEFBEYjLME5GgCuQGRPj5MMfknr7k8UJSYwTuQNhnPHGpWpUTzabdFNTQeqo5Q1ByMAzDDwUDmQPL50wNc0xAqWjSVOuBKxVGwGIYd4gBxk7kAEWZIxTCEYKlILUVwkECaEZ61FtAB7nBDJCIgtAcgCQYC2ABl93JA4zowBT0DzxMYVaAPKIIh4126z/QyAx9w5ACtAB2JLWOQwJHAA/SGg1RCIGOR3AAUFY1UMJa7gxhwF/lI3TCgMloFUJOkziTyQKsEEF1xo8HAAUVm0gAyMPPNDADjAEK0AOA4WN09gHlX12CLHPXvvtuf+EQ0jDoNXKPARp05QprxqDyiuxtGJKgEtR48tb8qDCFDUb1kNNqzknpHgACfygVQg8EeR0PkpYdUQdB/EwhFWPCDSGVYBASCNIgBPeBYABVgFBegzCDzNgKwSl8p0AgGcQ4QkEgT9R4EH4cYbKQSFlHkHGKwbQDHDkzB67KIU0ZjElhFjiHK2IzzWAhozwDMA2AQBGWm6lkPUFQA3mGUNB/5x2A6t4QBIJSUDlciIFgZjgJ0QAYUFmAEGBGMAqPFAIIz4gh259K1zjEogO7KKQRnxAAR55RyoGgApjCCQcSjmFMCYyjFUsJRTsCMA8nsEUHlqjKcnp4dEGgo8raKUHcJAfwvDxgZ/0IA8LYYNVMMWEnySBIQQYSA2sgj+FPKAgEqRgQSwYgE3+pJMJ+aRH/riUVAykHYHRxCz0BREoLcUTeUQHUzwxJV02ZR2CtArSBjIBImhFD4wRiLEeYRUuMCQfG/hJGQJABasU4iEE+4kJXOeQUIIxJyQbhFVKwM2T9GspnKBZK5bijHFMJBzsBBosmAKiewRuALII5k+GOf8QN3AtJ1OQlLH+9xMdNMR3TwjAHrQyghs0gCGJOGYZHtEshnhTIaR0gEQpehJsMMU7BLkHLzaxFGu4MSLeWMoq7gEP7jFjQ99oyifSZxAfDoSgVjmDMhGWrJ8scCE4+MkP8qEAZXGgC2uwE0KIZ54gUCEQcMgkQi4asjAKxAmNAsJT4aDKkBzjGp6wBuEKsg4+DoATvFBVQ/ChiqW4k1VLgRMx0qIO9Q2yIPloglYsgD9jGXNcmwrsppaYEwcEoAXnIkIMUDmQOkQtWj+gQg6IBcovYtSqAbCDD7L1gylMtiWYuAa+APYQ+AjOHsFgSjUEEo2+2FWYB0nEwqxihAj/GMt9atNK//SRhYmNAFMEIQRus6UBNaSMqmTDbACEyzANrEGKJsHHN0g6AGjM8SEeHQAw8GHWTPDGFU3Bxmv3iZBCmIcLxsqteYaJjxtogGE/sEFBGDGFiVlBqmCzbFXBOd8q2LerGHnHmhwyDPENYBnudEg5lhKLAMxzKb8IAG2YAo3x5oSfBlGBeUz2GIGYS70XJog+DoECwjaqBwYwSB4oUIRzoaBj+k0uf1XM4nOdYCPiiEYwIIKPcNBKFw6xBElFEQBwMOUWAfCFeLRU07sepB+NtMpjOxyAKOeEEG3Ispa3zOUtS+Ag+3DDH0ywv0LFzyCMsAEYPKAsriA3/3jKRfMNwmBlrRg0IyndhkTkwY1lDGBADTHFUi6hw6XAIgCpbQo8EGJTg8xhym0WiCEL+hF/0GEMc7JKihcyiRvAziokEIgEu3jZGTOk05/+yRU0so0BzIyQNC1GWQ5yiVl0YhYNWecAgtGOjwbAHWmZdZNhqxAORzoAaLBKCkQCAS1YZZoOKQSkSSbBRJZ6ZBExBKQxoBFauJog8NDEvAQSC1woJB676NVC4CoTpqgiAPAINqOdjBB8VDNaXGGElBlBEXxAd4iQDoNA/l2QLlilWRIkUUL8YQTlEpwgV/vJmS1yHHMPJN69GEgskIyREQ4gHcBeCioCMNdfzpvYCv8pQKYbdZdUT42yCqlD1QRiAyzgt97DFQAMAhAJEHBrIX2QTmtwipMSJAQfSsNsz3+uEApI6+EPqcWfCXKJAeRiINs4NEbaOoB2+HIA1wjAOtLyroM0GiFXPHYA4DC6nxoEH4L4AR8IUgBGecANChnjT9BwWAFYoAIwN4g+OvCTTgWABggryCRK4LiBgMHvgQh8QfTR8JwYHiO5GEDRdLaJfAoEHIG0CD48sRRkwJPBSU4Lb8xOb4UEneUEwYJWOFCDig6kHzkAAU56wM8t/CQKO5i4QNywcpzQIW050UAaJmEQSTj7JyoQyBv2SgZGtCYfc9jDh63qhp8on/kFkQT/tH4CBo2MYwChF8g0Qs+OTEDPIuxYyjQCYKEBADmlTNEETQlydoToo37mARmRQHhaEQRTwAJ94AVQkHMCwAEPk3ZWIQQlMAY0QAMukARa0QT7wGZakQQrgAYyUAFacAFaQWoPYGJCNQSbpSzksg91tntJIAYgWAEnQIJWgUYZEX+b8CoCAQuZsCb2AArkYRGtNnWjwBSXoWvdY2E4gWELwQgoeB0F4QAcoDYXAAmZpTsTEwR3wA+ThjV9QBBONzFNQIDYxg8okFt7sBHIMDTANBC9MAAZJxCzQAr7BxHyQHpdNwxMwQmWcA+h0BSvwIQC4IQLYQMBaBCT0FMTcwTq/yIQiDACUgMEcxEA/pAGkHYuKuAP8mOG0cIFD0BKl5iJ2bKJHCFoHCcQmKAJriQQxpAJcEIR3jYArlSEAyBevdYUQ8h6KOcQXJB4BNFe0ZQtRDADtjdwg+A5jRIF/EYQidAFpHhM8mUQiKCMP7EB1xQApCQQDgCN56IH08gRrTZ/BOFROyYQ2cAMxTAR6jA0A7AO8aCHA4Aa3NEUw5AQn+IC+qiPhtUTfLCP+ghcB6EPg8AFeqAVHwAGOiB8BVEHZPAEmegDSkABTGcQBcAGKFB8OEEEWVADkkcQ+bAGIpBzQVACh2B7ZgCQQlQQF5mRWsGRHvkRMTMAeTQQ5zAAqv9AIPHwDNNAWg9hDLSSDQEgdUvxDPVgD2jCFNEQG5FwB5BQB40AYDzCAArQBnmQCDPHEJGAAHZgB4yQTA6xD4tQB3XgAFC3EFvpCF4JliARhAOgdQJxD4LGQwGgDspADYvmEO2gNwNgCpbgDtQ1AHByk00BIgxymO1hOJqQlwIRM81wUgEwDprwCXejEPYADn4mOMeQDOezFNJQD/dQDWmxjh6hD3iARCeRCM24EP2AB22DmCBxDEMziAQhCwMwDS0UAOdQGaqwXQdRL6WgWpdgD8zBFHX1C2nxbh/RAAIgAyhxAkuQEDAAApnUBoUYABGABBQgEBHgmrCpEQ/2hgL/kQzSwEY++Q5cBwqwwAu+8AvkoAutII/KcAv1QAkPthTdEADJcIRNUVfL2ZzPGZ0IgQIY8GXWiTQTMARZIBA7cJ3fGWABQgrJQBDF0C/SUHYBcA+/YGCDwQmx4EbyYEf4QiGzyBTWEBLM6ZwnAZ1HV1EHKhD6ICkNaogPOhFECZcCwQ6kxwzhkDLEoAusIA3N0AygYAqyIA4tBAx8qVI1sWDi8SALYQAq8FCEBAM0gGx8NxBwoAKflKICgQZoIAl7kARH4AVu1wgtgAQg0AI7IhCMoAKMoANTkEX4cAhW4AEgIAaIIhDQKQnTCQJ8MAEDcQNrGAAvGgAxcE0VEAUC/2AFKqAAKnBnA6EGLCB8+TADUGAEUJAGbYMPOUAFH9AEgKBK/lADoAoCMQCWYDoBY5AEHtACghoAD6ACcGAHW+ABTzADBTEIVvABIfAHXVUIMaAPf5BQC2EJbrILBbGXS3EK56BWCSEM2cUUrVAT7sAXTZGfENUDKyl9AlADATACI0AQMiAAX+al4WoEGoACY5CGWvA0F8AEZoAGSwAEjiAQ1okCkYV3W2ABXfAHLfADRQABfFoEG0AFY4AFPdABC6QChneoQ+ACAdAHWAUFJ1AAHXBJA0EAQrBsBeEHFhADazAGGiACA/eLIlAGLRAET8CJV/ADKvAH0PgBlDUCRv9ABCQwBtASagHgE0+AASxABmxmCAMBAz2QAmpABkPwBF/jAkAABUSAAg2xDu44hwNxCSI6ANLwDe4ArWwCDmvUFJvwDW8BlGlBDZXgECagB2fGBRjwSeJKruYaAOg6AkCAhZL2A8qEAVfAiQGgD1XwAa1hnU+wpwGQA3cwEOKUjSdgAZIqTn4gEA6Lrw4asQzqoIhHagFQRP1TEEEQhsqEt2sgAFnKPkQbAGuwmofAHuEaBG8wEFrgAzzhs6gZCUHgseIUjg4wBCvpLXtwjAvBC7syH8EYDud0S6oAC7SwDdlwDWaVFqgwa+6QlLUCmQwxRkwTAAVgAaAbtwNRruf/CqDhOq4D8QcC8DCSpFQCUQfXaZ2vK2J3cAD5EAniy6IEMQJ6ILkPW7kSGwAzKhCR8AMGIxBJAAIHoQdO0KYEoQRH8G/7cAeN4A/MqQYC4b1fOrc+oaICAQI3FgBSgAQFsQcZIGpCEBH3AFcDwA1MJhDxcAvHOxhNcQrfIxDngK1MoQzP4RD4wAFRIBBpIABtasEBAL50K75CTMQs0AMUAJBKQ8GHKhCDwCgYkAGIp6L2OxBlMLeTa6j8e7n8pAJAQLByIABscBCDgC0eAAPUIRA+EAMIQQj7gwEaYL4qesQYLL4CsQQdPAQfAJAuwKiM4QJn8xDEqVrvYBCVMA6u/yCPaiEN3FCTAWAJJZp/4wYRP2yWRkAFA2HH4VvH5CsQRIxYfqyPc/HEC/ADI8AYBaBhViygA1EBAiCoWwyx/fu/6ysAJMICQkCwBzEBa4AF+yOx/tADL3AQDmABViCoCyB7niy3X5bBBKHHAhEEfTzK6SHIE1EP4LUUnZALaft2xeAL4IALuOANvYAOPknD5ZkWypBgEbG9ZMB2WVTBIeDMRdzM3zu3ydYICPHEhCAAnduz9evKfCoErTHLXey/DioQSpAEERAEO7cQ+uAFAsAAAXAExloQRQRJAlG3nzzEd6zB2tjBT2DAUzXIPMYNTfEMvDChPAYMXJcWnyCeEv+RAhlAAhtwZlcwBPGTD87WyRX80UTMABaQBaUSCW36xASzadpbv0OwmnLgA1ugv5Q7TJar0Hg3qAKAWOqbMH4bAARjJ+abvQGwAPdqCAKAtwGwCEYs1CEdzR1crtkoEHgQP9hcEeRQGUzRDNmADjyYEMPgDeusFqhwyBXBTAIQQAORbCWQAzIAAtEE1ONrzyAdBYPwBmawAQjCxfwEARrwAXCwAG8gAvWbAXqwB4YQCJXSpght1f07xicgA49IAPvz0XT3A09wA5CQA0aABK2xD01gAWJgCGZABB9wOhgAAm2wAHDwBG1tz9A8ENIcAPkQBT7gAnGgAzDwA4Qgaij/LRHvIFppwQzXUAvjgA7uMAzuEAzv6QrUqxbK8A13KBEooATgB6NhEAQ9gAQ1cAhLQLCTsASn+wVfQBCG8N9PEwJRYwRjwMtzsASPKBCNIAU9YAFR4AYCLhB9wAV5IAUWYAFTkACvbHQB8OCPKAJmMHApYAFAQNYwIADdjRB5kAULAwRYcN8EMAbRBARbsKd4AAUVPgUGkOEBQOAGjuAQQOQCwQWg+7eAQHgWEAIxHgBmYLIYQQ66AsNaTq2GLRIMSRFffhD58HD+cJYIIXwnoAfAO5AJ8eVhjhFvnhH2IA6CtuWDoQywcF01KhQJ0APQtuccwQ6zwJ92ngmqwAurSQfoLAEJTyAEG/Bliu4RxCAaqiCktVIK2NAN55DOkb4SciAGf8CWnT7qpF7qpn7qqJ7qqr7qrN7qrv7qsB7rsj7rtF7rtj4QAQEAOw==" width="247" height="68" border="0" alt="Nessus Report" style="display: block;"></h1></td></tr>
+<tr><td class="nopadding"><h2 class="classtitle">Nessus Scan Report</h2></td></tr>
+<tr><td class="nopadding"><h2 class="date">Tue, 05 Jan 2016 16:35:45 W. Europe Standard Time</h2></td></tr>
+<tr><td class="reportpadding"><div class="reportinfo"></div></td></tr>
+</table>
+<div id="reportContent"><span xmlns="" class="classtoc">Table Of Contents</span><table xmlns="">
+<tr><td><span class="classtoc1"><a href="#idm70550256">Hosts Summary (Executive)</a></span></td></tr>
+<tr><td><table><tr>
+<td width="5%"><table style="table-layout: fixed;" width="10px" height="10px"><tr><td class="nopadding "></td></tr></table></td>
+<td width="95%"><a href="#idm70550128">192.168.58.131</a></td>
+</tr></table></td></tr>
+<tr><td><span class="classtoc1"><a href="#idm70946832">Compliance Executive</a></span></td></tr>
+<tr><td><table><tr>
+<td width="5%"><table style="table-layout: fixed;" width="10px" height="10px"><tr><td class="nopadding "></td></tr></table></td>
+<td width="95%"><a href="#idm70944528">Compliance Tests</a></td>
+</tr></table></td></tr>
+</table>
+<h1 xmlns="" class="classchapter" id="idm70550256">Hosts Summary (Executive)</h1>
+<table xmlns="">
+<tr width="100%" onclick="ceall(0)" onmouseover="this.style.cursor='pointer'" title="Collapse"><td align="left" width="100%">[-] Collapse All</td></tr>
+<tr width="100%" onclick="ceall(1)" onmouseover="this.style.cursor='pointer'" title="Expand"><td align="left" width="100%">[+] Expand All</td></tr>
+</table>
+<h2 xmlns="" class="classsection" id="idm70550128">192.168.58.131</h2>
+<h2 xmlns="" class="classh1 " style="vertical-align: middle;"><!--[if mso]><img src="cid:#" width="1" height="25" border="0" style="display: block; float: left;">  
+			<![endif]]]-->Summary</h2>
+<table xmlns="" width="100%">
+<tr>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Critical</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">High</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Medium</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Low</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Info</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Total</span></td>
+</tr>
+<tr>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #d43f3a; font-weight: bold !important;">21</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #ee9336; font-weight: bold !important;">5</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #fdc431; font-weight: bold !important;">9</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #4cae4c; font-weight: bold !important;">2</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #357abd; font-weight: bold !important;">87</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">124</span></td>
+</tr>
+</table>
+<h2 xmlns="" class="classh1 " style="vertical-align: middle;"><!--[if mso]><img src="cid:#" width="1" height="25" border="0" style="display: block; float: left;">  
+			<![endif]]]-->Details</h2>
+<table xmlns="" width="100%">
+<tr>
+<td width="20%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Severity</span></td>
+<td width="15%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Plugin Id</span></td>
+<td width="65%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: bold !important;">Name</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=54997" target="_blank"> 54997</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (June 2011 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=56566" target="_blank"> 56566</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (October 2011 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=57290" target="_blank"> 57290</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java JDK / JRE 6 &lt; Update 30 Multiple Vulnerabilities</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=57959" target="_blank"> 57959</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (February 2012 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=59462" target="_blank"> 59462</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (June 2012 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=61746" target="_blank"> 61746</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java JDK / JRE 6 &lt; Update 35 SunToolKit getField() and getMethod() Access Issue</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=62593" target="_blank"> 62593</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (October 2012 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=64454" target="_blank"> 64454</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (February 2013 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=64790" target="_blank"> 64790</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (February 2013 CPU Update 1)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=65995" target="_blank"> 65995</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (April 2013 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=66932" target="_blank"> 66932</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (June 2013 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=70472" target="_blank"> 70472</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (October 2013 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=71966" target="_blank"> 71966</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (January 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=73570" target="_blank"> 73570</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (April 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=76532" target="_blank"> 76532</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (July 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=78481" target="_blank"> 78481</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (October 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=80908" target="_blank"> 80908</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (January 2015 CPU) (POODLE)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=82820" target="_blank"> 82820</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (April 2015 CPU) (FREAK)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=84824" target="_blank"> 84824</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (July 2015 CPU) (Bar Mitzvah)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=86542" target="_blank"> 86542</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java SE Multiple Vulnerabilities (October 2015 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell4"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Critical (10.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=87209" target="_blank"> 87209</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Java Object Unserialization RCE (Local Check)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell3"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">High (9.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=65050" target="_blank"> 65050</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java JDK / JRE 6 &lt; Update 43 Remote Code Execution (Windows)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell3"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">High (9.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=81002" target="_blank"> 81002</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Fusion Middleware Oracle HTTP Server Multiple Vulnerabilities (January 2015 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell3"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">High (9.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=87253" target="_blank"> 87253</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">MS15-124: Cumulative Security Update for Internet Explorer (3116180)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell3"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">High (7.5)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=73914" target="_blank"> 73914</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Security Subcomponent Unspecified Vulnerability (April 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell3"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">High (7.5)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=80909" target="_blank"> 80909</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Multiple Vulnerabilities (January 2015 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (6.8)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=76527" target="_blank"> 76527</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Multiple Vulnerabilities (July 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (6.8)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=78541" target="_blank"> 78541</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Multiple Vulnerabilities (October 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (6.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=82822" target="_blank"> 82822</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Multiple Vulnerabilities (April 2015 CPU) (POODLE)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (5.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=57608" target="_blank"> 57608</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">SMB Signing Disabled</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (5.0)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=86569" target="_blank"> 86569</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Fusion Middleware Oracle HTTP Server Multiple Vulnerabilities (October 2015 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (4.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=74042" target="_blank"> 74042</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Multiple Vulnerabilities (April 2013 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (4.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=78447" target="_blank"> 78447</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">MS Security Advisory 3009008: Vulnerability in SSL 3.0 Could Allow Information Disclosure (POODLE)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (4.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=84823" target="_blank"> 84823</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Multiple Vulnerabilities (July 2015 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell2"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Medium (4.3)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=85582" target="_blank"> 85582</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Web Application Potentially Vulnerable to Clickjacking</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell1"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Low (3.5)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=76618" target="_blank"> 76618</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Fusion Middleware Oracle HTTP Server Multiple Vulnerabilities (July 2014 CPU)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell1"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Low (2.6)</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=11457" target="_blank"> 11457</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Registry : Winlogon Cached Password Weakness</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10107" target="_blank"> 10107</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">HTTP Server Type and Version</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10150" target="_blank"> 10150</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows NetBIOS / SMB Remote Host Information Disclosure</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10287" target="_blank"> 10287</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Traceroute Information</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10394" target="_blank"> 10394</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Log In Possible</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10395" target="_blank"> 10395</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Shares Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10396" target="_blank"> 10396</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Shares Access</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10400" target="_blank"> 10400</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Registry Remotely Accessible</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10456" target="_blank"> 10456</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Service Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10736" target="_blank"> 10736</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">DCE Services Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10785" target="_blank"> 10785</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB NativeLanManager Remote System Information Disclosure</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10859" target="_blank"> 10859</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB LsaQueryInformationPolicy Function SID Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10860" target="_blank"> 10860</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">SMB Use Host SID to Enumerate Local Users</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10902" target="_blank"> 10902</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows 'Administrators' Group User List</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10913" target="_blank"> 10913</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows - Local Users Information : Disabled accounts</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10914" target="_blank"> 10914</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows - Local Users Information : Never changed passwords</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10915" target="_blank"> 10915</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows - Local Users Information : User has never logged on</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=10916" target="_blank"> 10916</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows - Local Users Information : Passwords never expire</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=11011" target="_blank"> 11011</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Service Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=11149" target="_blank"> 11149</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">HTTP login page</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=11217" target="_blank"> 11217</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft SQL Server Detection (credentialed check)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=11936" target="_blank"> 11936</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">OS Identification</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=12053" target="_blank"> 12053</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Host Fully Qualified Domain Name (FQDN) Resolution</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=17651" target="_blank"> 17651</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB : Obtains the Password Policy</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=19506" target="_blank"> 19506</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Nessus Scan Information</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=20094" target="_blank"> 20094</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">VMware Virtual Machine Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=20811" target="_blank"> 20811</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Installed Software Enumeration (credentialed check)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=20836" target="_blank"> 20836</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Adobe Reader Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=20862" target="_blank"> 20862</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Mozilla Foundation Application Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=22964" target="_blank"> 22964</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Service Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=23974" target="_blank"> 23974</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Share Hosting Office Files</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=24260" target="_blank"> 24260</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">HyperText Transfer Protocol (HTTP) Information</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=24269" target="_blank"> 24269</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows Management Instrumentation (WMI) Available</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=24270" target="_blank"> 24270</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Computer Manufacturer Information (WMI)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=24272" target="_blank"> 24272</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Network Interfaces Enumeration (WMI)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=24282" target="_blank"> 24282</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Data Execution Prevention (DEP) is Disabled</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=25220" target="_blank"> 25220</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">TCP/IP Timestamps Supported</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=27524" target="_blank"> 27524</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Office Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=28211" target="_blank"> 28211</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Flash Player Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=33545" target="_blank"> 33545</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java Runtime Environment (JRE) Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=34096" target="_blank"> 34096</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">BIOS Version (WMI)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=34220" target="_blank"> 34220</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Netstat Portscanner (WMI)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=34252" target="_blank"> 34252</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Remote Listeners Enumeration (WMI)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=35716" target="_blank"> 35716</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Ethernet Card Manufacturer Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=38153" target="_blank"> 38153</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Summary of Missing Patches</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=42399" target="_blank"> 42399</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Silverlight Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=43111" target="_blank"> 43111</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">HTTP Methods Allowed (per directory)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=44401" target="_blank"> 44401</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Service Config Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=44871" target="_blank"> 44871</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">WMI Windows Feature Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=45590" target="_blank"> 45590</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Common Platform Enumeration (CPE)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=48337" target="_blank"> 48337</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows ComputerSystemProduct Enumeration (WMI)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=48942" target="_blank"> 48942</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Registry : OS Version and Processor Architecture</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=49704" target="_blank"> 49704</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">External URLs</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=50346" target="_blank"> 50346</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Update Installed</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=51351" target="_blank"> 51351</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft .NET Framework Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=52001" target="_blank"> 52001</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">WMI QuickFixEngineering (QFE) Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=54615" target="_blank"> 54615</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Device Type</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=55472" target="_blank"> 55472</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Device Hostname</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=56310" target="_blank"> 56310</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Firewall Rule Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=56468" target="_blank"> 56468</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Time of Last System Startup</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=57033" target="_blank"> 57033</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Patch Bulletin Feasibility Check</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=57793" target="_blank"> 57793</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Fusion Middleware WebLogic Detection (credentialed check)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=58181" target="_blank"> 58181</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows DNS Server Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=58452" target="_blank"> 58452</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Startup Software Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=58651" target="_blank"> 58651</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Netstat Active Connections</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=60119" target="_blank"> 60119</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows SMB Share Permissions Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=62042" target="_blank"> 62042</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">SMB QuickFixEngineering (QFE) Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=63080" target="_blank"> 63080</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Mounted Devices</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=63620" target="_blank"> 63620</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows Product Key Retrieval</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=64582" target="_blank"> 64582</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Netstat Connection Information</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=65739" target="_blank"> 65739</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java JRE Universally Enabled</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=65743" target="_blank"> 65743</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java JRE Enabled (Internet Explorer)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=66334" target="_blank"> 66334</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Patch Report</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=66424" target="_blank"> 66424</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Malicious Software Removal Tool Installed</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=66517" target="_blank"> 66517</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Adobe Reader Enabled in Browser (Internet Explorer)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=66542" target="_blank"> 66542</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">JavaScript Enabled in Adobe Reader</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=70329" target="_blank"> 70329</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Process Information</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=70331" target="_blank"> 70331</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Windows Process Module Information</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=70768" target="_blank"> 70768</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Reputation of Windows Executables: Unknown Process(es)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=71246" target="_blank"> 71246</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Enumerate Local Group Memberships</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=71462" target="_blank"> 71462</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Java JRE Premier Support and Extended Support Version Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=71637" target="_blank"> 71637</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">WMI IIS ISAPI Extension Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=71643" target="_blank"> 71643</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle Installed Software Enumeration (Windows)</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=72367" target="_blank"> 72367</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Microsoft Internet Explorer Version Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=72482" target="_blank"> 72482</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows Display Driver Enumeration</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=72684" target="_blank"> 72684</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Enumerate Local Users</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=73913" target="_blank"> 73913</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle WebLogic Server Detection</span></td>
+</tr>
+<tr>
+<td width="20%" valign="top" class="classcell0"><span class="classtext" style="color: #ffffff; font-weight: bold !important;">Info</span></td>
+<td width="10%" valign="top" class="classcell"> <a href="http://www.nessus.org/plugins/index.php?view=single&amp;id=76617" target="_blank"> 76617</a>
+</td>
+<td width="70%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Oracle HTTP Server Installed</span></td>
+</tr>
+</table>
+<h1 xmlns="" class="classchapter" id="idm70946832">Compliance Executive</h1>
+<table xmlns="">
+<tr width="100%" onclick="ceall(0)" onmouseover="this.style.cursor='pointer'" title="Collapse"><td align="left" width="100%">[-] Collapse All</td></tr>
+<tr width="100%" onclick="ceall(1)" onmouseover="this.style.cursor='pointer'" title="Expand"><td align="left" width="100%">[+] Expand All</td></tr>
+</table>
+<h2 xmlns="" class="classsection" id="idm70944528">Compliance Tests</h2>
+<table xmlns="" width="100%">
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.1.1 Set 'Enforce password history' to '24 or more password(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.1.2 Set 'Maximum password age' to 60 or fewer days, but not 0</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.1.3 Set 'Minimum password age' to '1 or more day(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.1.4 Set 'Minimum password length' to '14 or more character(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.1.5 Set 'Password must meet complexity requirements' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.1.6 Set 'Store passwords using reversible encryption' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.2.1 Set 'Account lockout duration' to '15 or more minute(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.2.2 Set 'Account lockout threshold' to 10 or fewer invalid logon attempt(s), but not 0</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">1.2.3 Set 'Reset account lockout counter after' to '15 or more minute(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.1 Set 'Access Credential Manager as a trusted caller' to 'No One'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.2 Set 'Access this computer from the network'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.3 Set 'Act as part of the operating system' to 'No One'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.5 Set 'Adjust memory quotas for a process' to 'Administrators, LOCAL SERVICE, NETWORK SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.6 Set 'Allow log on locally' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.7 Configure 'Allow log on through Remote Desktop Services'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.8 Set 'Back up files and directories' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.9 Set 'Change the system time' to 'Administrators, LOCAL SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.10 Set 'Change the time zone' to 'Administrators, LOCAL SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.11 Set 'Create a pagefile' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.12 Set 'Create a token object' to 'No One'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.13 Set 'Create global objects' to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.14 Set 'Create permanent shared objects' to 'No One'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.15 Set 'Create symbolic links' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.16 Set 'Debug programs' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.17 Set 'Deny access to this computer from the network'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.18 Set 'Deny log on as a batch job' to include 'Guests'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.19 Set 'Deny log on as a service' to include 'Guests'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.20 Set 'Deny log on locally' to include 'Guests'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.21 Set 'Deny log on through Remote Desktop Services' to include 'Guests, Local account'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.22 Set 'Enable computer and user accounts to be trusted for delegation'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.23 Set 'Force shutdown from a remote system' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.24 Set 'Generate security audits' to 'LOCAL SERVICE, NETWORK SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.25 Set 'Impersonate a client after authentication' to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.26 Set 'Increase scheduling priority' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.27 Set 'Load and unload device drivers' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.28 Set 'Lock pages in memory' to 'No One'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.29 Set 'Manage auditing and security log' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.30 Set 'Modify an object label' to 'No One'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.31 Set 'Modify firmware environment values' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.32 Set 'Perform volume maintenance tasks' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.33 Set 'Profile single process' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.34 Set 'Profile system performance' to 'Administrators, NT SERVICE\WdiServiceHost'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.35 Set 'Replace a process level token' to 'LOCAL SERVICE, NETWORK SERVICE'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.36 Set 'Restore files and directories' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.37 Set 'Shut down the system' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.2.39 Set 'Take ownership of files or other objects' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.1.1 Set 'Accounts: Block Microsoft accounts' to 'Users can't add or log on with Microsoft accounts'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.1.2 Set 'Accounts: Guest account status' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.1.3 Set 'Accounts: Limit local account use of blank passwords to console logon only' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.1.4 Configure 'Accounts: Rename administrator account'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.1.5 Configure 'Accounts: Rename guest account'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.2.1 Set 'Audit: Force audit policy subcategory settings to override audit policy category settings' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.2.2 Set 'Audit: Shut down system immediately if unable to log security audits' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.4.1 Set 'Devices: Allowed to format and eject removable media' to 'Administrators'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.4.2 Set 'Devices: Prevent users from installing printer drivers' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.6.1 Set 'Domain member: Digitally encrypt or sign secure channel data (always)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.6.2 Set 'Domain member: Digitally encrypt secure channel data (when possible)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.6.3 Set 'Domain member: Digitally sign secure channel data (when possible)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.6.4 Set 'Domain member: Disable machine account password changes' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.6.5 Set 'Domain member: Maximum machine account password age' to 30 or fewer days, but not 0</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.6.6 Set 'Domain member: Require strong (Windows 2000 or later) session key' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.1 Set 'Interactive logon: Do not display last user name' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.2 Set 'Interactive logon: Do not require CTRL+ALT+DEL' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.3 Set 'Interactive logon: Machine inactivity limit' to 900 or fewer second(s), but not 0 </span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.4 Configure 'Interactive logon: Message text for users attempting to log on'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.5 Configure 'Interactive logon: Message title for users attempting to log on'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.6 Set 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' to '4 or fewer logon(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.7 Set 'Interactive logon: Prompt user to change password before expiration' to 'between 5 and 14 days'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.7.8 Set 'Interactive logon: Smart card removal behavior' to 'Lock Workstation'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.8.1 Set 'Microsoft network client: Digitally sign communications (always)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.8.2 Set 'Microsoft network client: Digitally sign communications (if server agrees)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.8.3 Set 'Microsoft network client: Send unencrypted password to third-party SMB servers' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.9.1 Set 'Microsoft network server: Amount of idle time required before suspending session' to '15 or fewer minute(s)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.9.2 Set 'Microsoft network server: Digitally sign communications (always)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.9.3 Set 'Microsoft network server: Digitally sign communications (if client agrees)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.9.4 Set 'Microsoft network server: Disconnect clients when logon hours expire' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.9.5 Set 'Microsoft network server: Server SPN target name validation level' to 'Accept if provided by client'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.10.1 Set 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.10.2 Set 'MSS: IP source routing protection level' to 'Highest protection, source routing is completely disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.10.3 Set 'MSS: IP source routing protection level' to 'Highest protection, source routing is completely disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.10.4 Set 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.10.5 Set 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires' to '5 or fewer seconds'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.10.6 Set 'MSS: Percentage threshold for the security event log at which the system will generate a warning' to '90% or less'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.1 Set 'Network access: Allow anonymous SID/Name translation' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.2 Set 'Network access: Do not allow anonymous enumeration of SAM accounts' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.3 Set 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.4 Set 'Network access: Let Everyone permissions apply to anonymous users' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.5 Configure 'Network Access: Named Pipes that can be accessed anonymously'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.6 Set 'Network access: Remotely accessible registry paths'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.7 Set 'Network access: Remotely accessible registry paths and sub-paths'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.8 Set 'Network access: Restrict anonymous access to Named Pipes and Shares' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.9 Set 'Network access: Shares that can be accessed anonymously' to 'None'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.11.10 Set 'Network access: Sharing and security model for local accounts' to 'Classic - local users authenticate as themselves'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.1 Set 'Network security: Allow Local System to use computer identity for NTLM' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.2 Set 'Network security: Allow LocalSystem NULL session fallback' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.3 Set 'Network Security: Allow PKU2U authentication requests to this computer to use online identities' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.4 Set 'Network Security: Configure encryption types allowed for Kerberos' to 'RC4\AES128\AES256\Future types'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.5 Set 'Network security: Do not store LAN Manager hash value on next password change' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.6 Set 'Network security: Force logoff when logon hours expire' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.7 Set 'Network security: LAN Manager authentication level' to 'Send NTLMv2 response only. Refuse LM &amp; NTLM'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.8 Set 'Network security: LDAP client signing requirements' to 'Negotiate signing' or higher</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.9 Set 'Network security: Minimum session security for NTLM SSP based clients' to 'Require NTLMv2 and 128-bit encryption'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.12.10 Set 'Network security: Minimum session security for NTLM SSP based servers' to 'Require NTLMv2 and 128-bit encryption'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.13.1 Set 'Recovery console: Allow automatic administrative logon' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.13.2 Set 'Recovery console: Allow floppy copy and access to all drives and all folders' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.14.1 Set 'Shutdown: Allow system to be shut down without having to log on' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.16.1 Set 'System objects: Require case insensitivity for non-Windows subsystems' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.16.2 Set 'System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.1 Set 'User Account Control: Admin Approval Mode for the Built-in Administrator account' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.2 Set 'User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.3 Set 'User Account Control: Behavior of the elevation prompt in Admin Approval Mode' to 'Prompt for consent on the secure desktop'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.4 Set 'User Account Control: Behavior of the elevation prompt for standard users' to 'Automatically deny elevation requests'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.5 Set 'User Account Control: Detect application installations and prompt for elevation' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.6 Set 'User Account Control: Only elevate UIAccess applications that are installed in secure locations' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.7 Set 'User Account Control: Run all administrators in Admin Approval Mode' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.8 Set 'User Account Control: Switch to the secure desktop when prompting for elevation' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.3.18.9 Set 'User Account Control: Virtualize file and registry write failures to per-user locations' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.10 Disable Unnecessary SQL Server Protocols - 'Named Pipes protocol is disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.10 Disable Unnecessary SQL Server Protocols - 'Shared Memory protocol is enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.10 Disable Unnecessary SQL Server Protocols - 'TCP/IP protocol is disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.10 Disable Unnecessary SQL Server Protocols - 'VIA protocol is disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.11 Configure SQL Server to use non-standard ports</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">2.13 Set the 'Hide Instance' option to 'Yes' for Production SQL Server instances</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">5.1 Set the 'Maximum number of error log files' setting to greater than or equal to 12</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.1 Set 'Windows Firewall: Domain: Firewall state' to 'On (recommended)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.2 Set 'Windows Firewall: Domain: Inbound connections' to 'Block (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.3 Set 'Windows Firewall: Domain: Outbound connections' to 'Allow (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.4 Set 'Windows Firewall: Domain: Display a notification' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.5 Set 'Windows Firewall: Domain: Allow unicast response' to 'No'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.6 Set 'Windows Firewall: Domain: Apply local firewall rules' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.7 Set 'Windows Firewall: Domain: Apply local connection security rules' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.8 Set 'Windows Firewall: Domain: Logging: Name' to '%SYSTEMROOT%\System32\logfiles\firewall\domainfw.log'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.9 Set 'Windows Firewall: Domain: Logging: Size limit (KB)' to '16,384 KB or greater '</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.10 Set 'Windows Firewall: Domain: Logging: Log dropped packets' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.1.11 Set 'Windows Firewall: Domain: Logging: Log successful connections' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.1 Set 'Windows Firewall: Private: Firewall state' to 'On (recommended)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.2 Set 'Windows Firewall: Private: Inbound connections' to 'Block (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.3 Set 'Windows Firewall: Private: Outbound connections' to 'Allow (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.4 Set 'Windows Firewall: Private: Display a notification' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.5 Set 'Windows Firewall: Private: Allow unicast response' to 'No'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.6 Set 'Windows Firewall: Private: Apply local firewall rules' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.7 Set 'Windows Firewall: Private: Apply local connection security rules' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.8 Set 'Windows Firewall: Private: Logging: Name' to '%SYSTEMROOT%\System32\logfiles\firewall\privatefw.log'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.9 Set 'Windows Firewall: Private: Logging: Size limit (KB)' to '16,384 KB or greater'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.10 Set 'Windows Firewall: Private: Logging: Log dropped packets' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.2.11 Set 'Windows Firewall: Private: Logging: Log successful connections' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.1 Set 'Windows Firewall: Public: Firewall state' to 'On (recommended)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.2 Set 'Windows Firewall: Public: Inbound connections' to 'Block (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.3 Set 'Windows Firewall: Public: Outbound connections' to 'Allow (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.4 Set 'Windows Firewall: Public: Display a notification' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.5 Set 'Windows Firewall: Public: Allow unicast response' to 'No'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.6 Set 'Windows Firewall: Public: Apply local firewall rules' to 'Yes (default)'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.7 Set 'Windows Firewall: Public: Apply local connection security rules' to 'No'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.8 Set 'Windows Firewall: Public: Logging: Name' to '%SYSTEMROOT%\System32\logfiles\firewall\publicfw.log'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.9 Set 'Windows Firewall: Public: Logging: Size limit (KB)' to '16,384 KB or greater'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.10 Set 'Windows Firewall: Public: Logging: Log dropped packets' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">9.3.11 Set 'Windows Firewall: Public: Logging: Log successful connections' to 'Yes'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.1.1 Set 'Audit Credential Validation' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.2.1 Set 'Audit Application Group Management' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.2.3 Set 'Audit Distribution Group Management' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.2.4 Set 'Audit Other Account Management Events' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.2.5 Set 'Audit Security Group Management' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.2.6 Set 'Audit User Account Management' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.3.1 Set 'Audit Process Creation' to 'Success'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.5.1 Set 'Audit Account Lockout' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.5.2 Set 'Audit Logoff' to 'Success'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.5.3 Set 'Audit Logon' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.5.4 Set 'Audit Other Logon/Logoff Events' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.5.5 Set 'Audit Special Logon' to 'Success'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.6.1 Set 'Audit File System' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.6.2 Set 'Audit Handle Manipulation' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.6.3 Set 'Audit Registry' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.6.4 Set 'Audit Removable Storage' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.7.1 Set 'Audit Audit Policy Change' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.7.2 Set 'Audit Authentication Policy Change' to 'Success'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.8.1 Set 'Audit Sensitive Privilege Use' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.9.1 Set 'Audit IPsec Driver' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.9.2 Set 'Audit Other System Events' to 'No Auditing'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.9.3 Set 'Audit Security State Change' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.9.4 Set 'Audit Security System Extension' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">17.9.5 Set 'Audit System Integrity' to 'Success and Failure'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.1.1.1 Set 'Prevent enabling lock screen camera' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.1.1.2 Set 'Prevent enabling lock screen slide show' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.4.1 Set 'Apply UAC restrictions to local accounts on network logons' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.4.2 Set 'WDigest Authentication' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.6.23.1 Set 'Do not display network selection UI' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.5.1 Set 'Allow Microsoft accounts to be optional' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.7.1 Set 'Turn off Autoplay' to 'Enabled:All drives'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.1 Ensure EMET is installed</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.2 Set 'Default Protections for Internet Explorer' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.3 Set 'Default Protections for Popular Software' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.4 Set 'Default Protections for Recommended Software' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.5 Set 'System ASLR' to 'Enabled:Application Opt-In'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.6 Set 'System DEP' to 'Enabled:Application Opt-Out'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.17.7 Set 'System SEHOP' to 'Enabled:Application Opt-Out'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.1.1 Set 'Application: Control Event Log behavior when the log file reaches its maximum size' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.1.2 Set 'Application: Maximum Log Size (KB)' to 'Enabled:32,768 or greater'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.2.1 Set 'Security: Control Event Log behavior when the log file reaches its maximum size' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.2.2 Set 'Security: Maximum Log Size (KB)' to 'Enabled:196,608 or greater'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.3.1 Set 'Setup: Control Event Log behavior when the log file reaches its maximum size' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.3.2 Set 'Setup: Maximum Log Size (KB)' to 'Enabled:32,768 or greater'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.19.4.2 Set 'System: Maximum Log Size (KB)' to 'Enabled:32,768 or greater'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.39.3.9.2 Set 'Set client connection encryption level: Encryption Level' to 'Enabled: High Level'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.41.2 Set 'Allow indexing of encrypted files' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.56.1 Set 'Always install with elevated privileges' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.57.1 Set 'Sign-in last interactive user automatically after a system-initiated restart' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.71.1 Set 'Configure Automatic Updates' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: green; font-weight: bold !important;">PASSED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.71.2 Set 'Configure Automatic Updates: Scheduled install day' to '0 - Every day'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.71.3 Set 'Do not adjust default option to 'Install Updates and Shut Down' in Shut Down Windows dialog box' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.71.4 Set 'Do not display 'Install Updates and Shut Down' option in Shut Down Windows dialog box' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.71.5 Set 'No auto-restart with logged on users for scheduled automatic updates installations' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.7.71.6 Set 'Reschedule Automatic Updates scheduled installations' to 'Enabled:1 minute'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">18.8.19.4.1 Set 'System: Control Event Log behavior when the log file reaches its maximum size' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.1.3.1 Set 'Enable screen saver' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.1.3.2 Set 'Force specific screen saver: Screen saver executable name' to 'Enabled:scrnsave.scr'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: red; font-weight: bold !important;">FAILED</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.1.3.3 Set 'Password protect the screen saver' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.1.3.4 Set 'Screen saver timeout:Seconds' to 'Enabled:900 or fewer', but not 0</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.7.4.1 Set 'Do not preserve zone information in file attachments' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.7.4.2 Set 'Notify antivirus programs when opening attachments' to 'Enabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">19.7.35.1 Set 'Always install with elevated privileges' to 'Disabled'</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">CIS Security Benchmark For Microsoft Windows Server 2012 R2 MS</span></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="classcell"><span class="classtext" style="color: orange; font-weight: bold !important;">WARNING</span></td>
+<td width="90%" valign="top" class="classcell"><span class="classtext" style="color: #263645; font-weight: normal;">Windows IIS 7.0/7.5 is not installed</span></td>
+</tr>
+</table></div></td></tr></table></td></tr></table><div id="copyright">
+            This is a report from the
+             <a xmlns="" href="http://www.tenable.com/" target="_blank">Nessus Vulnerability Scanner</a>
+            .<br xmlns="">
+            Nessus is published by Tenable Network Security, Inc | 7021 Columbia Gateway Drive Suite 500, Columbia, MD 21046<br xmlns="">
+            © 2016 Tenable Network Security, Inc. All rights reserved. 
+        </div></body></html>
