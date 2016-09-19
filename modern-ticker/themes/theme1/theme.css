@@ -1,0 +1,70 @@
+﻿@charset "utf-8" ;
+
+/* Ticker */
+.modern-ticker {
+	color: #fafafa !important;
+	background-color: #fafafa;
+}
+	
+	/* Label */
+	.mt-label {
+		/* background-color: #0099ff ; */
+		background-color: #ff0000;
+	}
+	
+	/* News */
+	.mt-news {
+		background-color: #dedede;
+	}
+	.mt-preloader {
+		background: url("https://googledrive.com/host/0B_gSDN9YvG9VbUxsbVhkdEdnQlk") no-repeat center;
+	}
+	.mt-news ul {
+		/* Preload */
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VbnlFUlRCd2hqeGs");
+	}
+	.mt-news a {
+		color: #505050 !important;
+		background-color: #dedede !important;
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VZnB2aTVHdHNFWDQ") !important;
+		line-height: 22px !important;
+	}
+	.mt-news a:hover {
+		color: #fafafa !important;
+		/*background-color: #0099ff !important;*/
+		background-color: #ff0000 !important;
+		border-color: #ff2200 ;
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VbnlFUlRCd2hqeGs");
+	}
+	.mt-news a:active {
+		background-color: #0077ff;
+	}
+	
+	/* Controls */
+	.mt-controls {
+		/* Preload */
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VWHVmREZNWGc4N0U");
+	}
+	.mt-prev, .mt-next {
+		/* background-color: #0099ff; */
+		background-color: #ff0000;
+	}
+	.mt-prev {
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VS1ZrQ1NKdkpmbkk");
+	}
+	.mt-next {
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VaEd5Y0VTRk5GLW8");
+	}
+	.mt-play {
+		background-color: #ff0000 ;
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VUWpUS3YwMTZFc00");
+	}
+	.mt-pause {
+		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VWHVmREZNWGc4N0U");
+	}
+	.mt-play:hover, .mt-prev:hover, .mt-next:hover {
+		background-color: #ff2200;
+	}
+	.mt-play:active, .mt-prev:active, .mt-next:active {
+		background-color: #ff4400;
+	}
