@@ -17,16 +17,16 @@
 		background-color: #dedede;
 	}
 	.mt-preloader {
-		background: url("https://googledrive.com/host/0B_gSDN9YvG9VbUxsbVhkdEdnQlk") no-repeat center;
+		background: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/preloader.gif") no-repeat center;
 	}
 	.mt-news ul {
 		/* Preload */
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VbnlFUlRCd2hqeGs");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/bullet-over.png");
 	}
 	.mt-news a {
 		color: #505050 !important;
 		background-color: #dedede !important;
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VZnB2aTVHdHNFWDQ") !important;
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/bullet.png") !important;
 		line-height: 22px !important;
 	}
 	.mt-news a:hover {
@@ -34,7 +34,7 @@
 		/*background-color: #0099ff !important;*/
 		background-color: #ff0000 !important;
 		border-color: #ff2200 ;
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VbnlFUlRCd2hqeGs");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/bullet-over.png");
 	}
 	.mt-news a:active {
 		background-color: #0077ff;
@@ -43,24 +43,24 @@
 	/* Controls */
 	.mt-controls {
 		/* Preload */
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VWHVmREZNWGc4N0U");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/pause.png");
 	}
 	.mt-prev, .mt-next {
 		/* background-color: #0099ff; */
 		background-color: #ff0000;
 	}
 	.mt-prev {
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VS1ZrQ1NKdkpmbkk");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/arrow-prev.png");
 	}
 	.mt-next {
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VaEd5Y0VTRk5GLW8");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/arrow-next.png");
 	}
 	.mt-play {
 		background-color: #ff0000 ;
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VUWpUS3YwMTZFc00");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/play.png");
 	}
 	.mt-pause {
-		background-image: url("https://googledrive.com/host/0B_gSDN9YvG9VWHVmREZNWGc4N0U");
+		background-image: url("https://christian-hoekstra.github.io/blogspot/modern-ticker/themes/theme1/images/pause.png");
 	}
 	.mt-play:hover, .mt-prev:hover, .mt-next:hover {
 		background-color: #ff2200;
