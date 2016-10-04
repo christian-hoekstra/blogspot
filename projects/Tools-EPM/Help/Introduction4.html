@@ -1,0 +1,106 @@
+﻿<html>
+	
+<head>
+	<title>Introduction</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Tools-EPM.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Introduction4");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Introduction</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Tools.html">Tools</a> &rsaquo;&rsaquo; <a href="cryptTool.html">cryptTool</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="cryptTool.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="cryptTool.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Help3.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps5"><span class="rvts0"><span class="rvts13">cryptTool.cmd|sh</span></span></h1>
+<p class="rvps2"><span class="rvts6">Allows you to encode and decode password strings compatible with Shared Services through the command-line. In addition it allows you to retrieve the security key from Shared Services (decrypted) or use a security key retrieved from another EPM implementation.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts17">Features</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">No credentials are required in order to use this utility.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Create encrypted password strings.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Descrypt encrypted password strings e.g. stored in Shared Services registry.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Encrypt and descrypt password strings using a security key retrieved from another EPM implementation.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Retrieve the security used by Shared Services from a specific EPM implementation.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">When new security keys are generated from Shared Services, the new keys are automaticly used on next execution.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Supports the enclosure of encryted password strings in case the string contains special characters. </span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts17">Limitations</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Must be executed from a system that has Foundation Shared Services installed.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Only password created by Shared Services (registry) can be decrypted.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Created encrypted passwords are only compatible with Shared Services (registry) on the EPM implementation where it was encrypted.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Password from native users cannot be decrypted, they are hashed which is a oneway process.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="http://www.helpndoc.com/feature-tour">Easily create Qt Help files</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2000-2016 by christian-hoekstra.blogspot.com. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

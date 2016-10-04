@@ -1,0 +1,99 @@
+﻿<html>
+	
+<head>
+	<title>Installation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Tools-EPM.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Installation1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Installation</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Installation.html">Installation</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Installation.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Download.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Configuration.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps5"><span class="rvts0"><span class="rvts13">Single Server Deployment</span></span></h1>
+<p class="rvps2"><span class="rvts6">Extract the downloaded ZIP file in any folder located on a EPM server that contains Foundation. In case you renamed the instance, edit the variable </span><span class="rvts15">EPM_ORACLE_INSTANCE</span><span class="rvts6"> located on the file </span><span class="rvts15">set_env.cmd</span><span class="rvts6"> to match your configuration.</span></p>
+<p class="rvps2"><span class="rvts6">Continue with the </span><a class="rvts14" href="Configuration.html">configuration</a><span class="rvts6"> of Tools-EPM.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps5"><span class="rvts0"><span class="rvts13">Distributed Installation</span></span></h1>
+<p class="rvps2"><span class="rvts6">Extract the downloaded ZIP file in any folder located on each EPM server within the distributed environment. Some utilities may not work, depending on the utility and installed EPM components. Please see </span><a class="rvts14" href="SystemRequirements.html">System Requirements</a><span class="rvts6"> for more details. On each server, edit the variable </span><span class="rvts15">EPM_ORACLE_INSTANCE</span><span class="rvts6"> located on the file </span><span class="rvts15">set_env.cmd</span><span class="rvts6"> to match the configuration of that server. </span></p>
+<p class="rvps2"><span class="rvts6">Continue with the </span><a class="rvts14" href="Configuration.html">configuration</a><span class="rvts6"> of Tools-EPM.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps5"><span class="rvts0"><span class="rvts13">Multiple Instances</span></span></h1>
+<p class="rvps2"><span class="rvts6">In case multiple instances are configured on either of the deployment methods (Single server / Distributed), use the first instance. </span></p>
+<p class="rvps2"><span class="rvts6">Continue with the </span><a class="rvts14" href="Configuration.html">configuration</a><span class="rvts6"> of Tools-EPM.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts16">Screen-shot</span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem1.png"></p>
+<p class="rvps2"><span class="rvts16"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="http://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2000-2016 by christian-hoekstra.blogspot.com. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

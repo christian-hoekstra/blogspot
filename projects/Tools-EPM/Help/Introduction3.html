@@ -1,0 +1,100 @@
+﻿<html>
+	
+<head>
+	<title>Introduction</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Tools-EPM.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Introduction3");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Introduction</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Tools.html">Tools</a> &rsaquo;&rsaquo; <a href="lcmReportManager.html">lcmReportManager</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="lcmReportManager.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="lcmReportManager.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Help2.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps5"><span class="rvts0"><span class="rvts13">lcmReportManager.cmd|sh</span></span></h1>
+<p class="rvps2"><span class="rvts6">Allows you to delete all or selectivly delete LCM migration reports through the command-line. Since EPM 11.1.2.3, this option has been removed from the web interface. A migration report, per default, is purged after 30 days. However in some cases, it makes sense to manuually delete migration reports.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts17">Features</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">No credentials are required in order to use this utility.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">The option to delete all reports, or all reports created prior a specified amount of days.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts17">Limitations</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Must be executed from a system that has Foundation Shared Services installed.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">Not possible to selectivly delete individual reports.</span></li>
+<li style="list-style-image: url('lib/5.bmp')" class="rvps2"><span class="rvts6">No backup options.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="http://www.helpndoc.com">Free Web Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2000-2016 by christian-hoekstra.blogspot.com. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

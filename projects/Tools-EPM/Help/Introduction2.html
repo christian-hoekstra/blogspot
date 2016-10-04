@@ -1,0 +1,111 @@
+﻿<html>
+	
+<head>
+	<title>Introduction</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Tools-EPM.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Introduction2");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Introduction</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Tools.html">Tools</a> &rsaquo;&rsaquo; <a href="manageOPatch.html">manageOPatch</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="manageOPatch.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="manageOPatch.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Help1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h1 class="rvps5"><span class="rvts0"><span class="rvts13">manageOPatch.cmd|sh</span></span></h1>
+<p class="rvps2"><span class="rvts6">Manages OPatch inventory contents from a single Oracle Home, or all Oracle Homes on the system. You can create HTML or XML based reports, and compare two inventories by printing the differances of patches installed.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts17">Features</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">No credentials are required in order to use this utility.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Create HTML or XML based inventory report which includes:</span></li>
+<ul style="text-indent: 0px; margin-left: 48px; list-style-position: outside;">
+<li style="list-style-image: url('lib/8.bmp')" class="rvps2"><span class="rvts6">Basic System information;</span></li>
+<li style="list-style-image: url('lib/8.bmp')" class="rvps2"><span class="rvts6">Products installed;</span></li>
+<li style="list-style-image: url('lib/8.bmp')" class="rvps2"><span class="rvts6">Components installled per product;</span></li>
+<li style="list-style-image: url('lib/8.bmp')" class="rvps2"><span class="rvts6">Patches installed including their details.</span></li>
+</ul>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">You can manually specify an specific Oracle home</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Automaticly detect all Oracle homes on the system create a report for each</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Reports are automaticly stored in the "\Oracle\Middleware\user_projects\&lt;epmsystem&gt;\diagnostics\reports" folder.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">In case of a single report, the report is automaticly openen in the default browser after report creation.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Compare to XML based reports, and print the difference in patch level.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h2 class="rvps6"><span class="rvts0"><span class="rvts17">Limitations</span></span></h2>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Read access is required to the central OPatch inventory in automatic mode.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Dependend on a valid and correct OPatch local inventory.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Limited to patch number only. Patch descriptions are not stored in OPatch inventories.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Location where the reports are generated, cannot be changed.</span></li>
+<li style="list-style-image: url('lib/7.bmp')" class="rvps2"><span class="rvts6">Export formats are limited to HTML and XML.</span></li>
+</ul>
+<p></p>
+<p class="rvps4"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2000-2016 by christian-hoekstra.blogspot.com. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
